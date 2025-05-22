@@ -75,3 +75,14 @@ class Inventario:
     def adicionar_item (self, item: Item):
         if not item:
             print("Escolha um item para adicionar ao inventario")
+        else:
+            self.itens.append(item)
+            print(f"Item {item.tipo} adicionado ao inventario")
+    
+    def listar_itens(self):
+        if not self.itens:
+            print("Inventario vazio")
+        else:
+            print("Itens no inventario:")
+            for item in self.itens:
+                print(f"- {item.tipo} (Efeito: {item.efeito})")
