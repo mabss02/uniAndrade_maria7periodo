@@ -35,9 +35,9 @@ p1.usar_pocaoVerde(pocaoVerde)
 p1.usar_pocaoRoxa(pocaoRoxa)
 
 #del p1
-print(pocao1)
+print(pocaoVerde)
 
-class Player
+class Player:
     def __init__(self, nome):
         self.nome = nome
         self.energia = 100
@@ -52,11 +52,11 @@ class Player
         nova_energia = efeito_pocao + self.energia
 
         # Tratar casos (0 e 100+)
-        if nova_energia <=0;
+        if nova_energia <=0:
             nova_energia = 0
             self.vivo = False
 
-        if nova_energia >= 100;
+        if nova_energia >= 100:
             nova_energia = 100
             print("Impossivel usar cura!")
 
