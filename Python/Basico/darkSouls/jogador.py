@@ -1,11 +1,15 @@
 class Jogador:
-    self.nome = nome
-    self.dano = dano
-    self.__saude = 100 #encapsulamento
 
+    def __init__(self, nome, dano):
+        self.nome = nome
+        self.dano = dano
+        self.__saude = 100 #encapsulamento
+
+    @property # Decorador retorna apenas como propriedade
     def get_saude(self):
         return self.__saude
     
+    #@saude.setter # Decorador retorna apenas como propriedade
     def set_saude(self, valor):
         self.saude += valor
 
